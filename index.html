@@ -18,7 +18,7 @@
                 <li><a href="#home">Trang Chủ</a></li>
                 <li><a href="#products">Sản Phẩm</a></li>
                 <li><a href="#about">Về Chúng Tôi</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
+                <a href="#" id="account-management-link">Quản Lý Tài Khoản (dành cho admin)</a>
             </ul>
             <div class="cart-icon">
                 <i class="bi bi-cart3"></i>
@@ -33,8 +33,12 @@
             <h1 class="title">Tết Vàng Đỏ</h1>
             <p class="subtitle">Nơi Gắn Kết Yêu Thương</p>
             <div class="hero-buttons">
-                <button class="btn primary">Khám Phá Ngay</button>
-                <button class="btn secondary">Xem Ưu Đãi</button>
+                <a href="./Asset/html/login.html">
+                    <button class="btn primary">Đăng nhập</button>
+                </a>
+                <a href="#">
+                    <button class="btn secondary">Xem Ưu Đãi</button>
+                </a>
             </div>
         </div>
     </header>
@@ -72,15 +76,7 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2>Liên Hệ</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <input type="text" placeholder="Họ và tên">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Lời nhắn"></textarea>
-                <button class="btn">Gửi</button>
-            </div>
-            
+        <div class="contact-container">            
             <div class="contact-info">
                 <h3>Thông Tin Liên Hệ</h3>
                 <p><i class="bi bi-envelope"></i> info@tetvangdo.com</p>
@@ -129,5 +125,7 @@
             navLinks.classList.toggle('active');
         });
     </script>
+    <script src="./Asset/js/main.js"></script>
+    <script src="./Asset/js/admin.js"></script>
 </body>
 </html>

@@ -49,6 +49,11 @@ body {
     text-decoration: none;
 }
 
+#account-management-link {
+    color: #E63E3E;
+    font-weight: bold;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -263,21 +268,6 @@ body {
     background: #cc3333;
 }
 
-.contact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 3rem;
-}
-.contact-form .btn {
-    background: var(--primary);
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 4px;
-    margin: 0 auto;        /* Center the button */
-    width: 120px;         /* Adjust width to fit "Gửi" text */
-    text-align: center;   /* Center the text inside button */
-}
 /* Footer */
 .footer {
     background: #1d1d1f;
