@@ -57,7 +57,8 @@ document.getElementById("login-btn").addEventListener("click", () => {
 
     if (user) {
         alert("Đăng nhập thành công!");
-        // Thực hiện logic sau khi đăng nhập thành công
+        // Chuyển hướng đến trang khác sau khi đăng nhập thành công
+        window.location.href = "../html/home.html";
     } else {
         alert("Tên đăng nhập hoặc mật khẩu không đúng!");
     }

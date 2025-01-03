@@ -2,7 +2,7 @@
     position: relative;
     padding: 8rem 2rem 4rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 240, 224, 0.8)),
-                url('./Asset/img/your-uploaded-image.png'); /* Replace with your image path */
+                url('../img/bg.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     text-align: center;
