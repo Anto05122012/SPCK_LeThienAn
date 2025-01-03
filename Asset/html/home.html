@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Tết Vàng Đỏ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./Asset/css/style.css">
-    <title>Tết Vàng Đỏ - Mua Sắm Tết Online</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="nav-container container-fluid">
             <a href="#" class="logo navbar-brand">Tết Vàng Đỏ</a>
@@ -39,59 +38,76 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <header class="hero" id="home">
+    <!-- Header -->
+    <header class="hero">
         <div class="hero-content">
-            <h1 class="title">Tết Vàng Đỏ</h1>
-            <p class="subtitle">Nơi Gắn Kết Yêu Thương</p>
+            <h1 class="title">Chào Mừng Đến Với Tết Vàng Đỏ</h1>
+            <p class="subtitle">Mua Sắm Tết, Đong Đầy Yêu Thương</p>
             <div class="hero-buttons">
-                <a href="./Asset/html/login.html">
-                    <button class="btn primary">Đăng nhập</button>
-                </a>
-                <a href="#">
-                    <button class="btn secondary">Xem Ưu Đãi</button>
-                </a>
+                <a href="#products"><button class="btn primary">Khám Phá Sản Phẩm</button></a>
+                <a href="#about"><button class="btn secondary">Tìm Hiểu Thêm</button></a>
             </div>
         </div>
     </header>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <h2>Sản phẩm tiêu biểu</h2>
-        <div class="category-grid">
-            <div class="product-card">
-                <img src="./Asset/img/banh-tet.jpg" alt="Bánh Tết">
-                <div class="product-info">
-                    <h3>Bánh Chưng Truyền Thống</h3>
-                    <p class="price">165.000₫</p>
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-shipping-fast fa-3x mb-3 text-primary"></i>
+                    <h3>Giao Hàng Nhanh</h3>
+                    <p>Nhận hàng trong 24h tại nội thành.</p>
                 </div>
-            </div>
-            <div class="product-card">
-                <img src="./Asset/img/mut-tet.jpg" alt="Mứt Tết">
-                <div class="product-info">
-                    <h3>Hộp Mứt Tết Thập Cẩm</h3>
-                    <p class="price">250.000₫</p>
+                <div class="col-md-4">
+                    <i class="fas fa-star fa-3x mb-3 text-primary"></i>
+                    <h3>Chất Lượng Đảm Bảo</h3>
+                    <p>Sản phẩm chính hãng, uy tín.</p>
                 </div>
-            </div>
-            <div class="product-card">
-                <img src="./Asset/img/tra.jpg" alt="Trà Tết">
-                <div class="product-info">
-                    <h3>Trà Sen Tết</h3>
-                    <p class="price">150.000₫</p>
+                <div class="col-md-4">
+                    <i class="fas fa-phone-alt fa-3x mb-3 text-primary"></i>
+                    <h3>Hỗ Trợ 24/7</h3>
+                    <p>Tư vấn và hỗ trợ tận tình.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">            
-            <div class="contact-info">
-                <h3>Thông Tin Liên Hệ</h3>
-                <p><i class="bi bi-envelope"></i> info@tetvangdo.com</p>
-                <p><i class="bi bi-telephone"></i> 0123 456 789</p>
-                <p><i class="bi bi-geo-alt"></i> 123 Đường ABC, Quận XYZ, TP.HCM</p>
+    <!-- Products Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="text-center mb-5">Sản Phẩm Nổi Bật</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./Asset/img/banh-tet.jpg" class="card-img-top" alt="Bánh Chưng">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bánh Chưng Truyền Thống</h5>
+                            <p class="card-text">165.000₫</p>
+                            <a href="#" class="btn btn-primary">Mua Ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./Asset/img/mut-tet.jpg" class="card-img-top" alt="Mứt Tết">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Hộp Mứt Tết Thập Cẩm</h5>
+                            <p class="card-text">250.000₫</p>
+                            <a href="#" class="btn btn-primary">Mua Ngay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./Asset/img/tra.jpg" class="card-img-top" alt="Trà Sen">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Trà Sen Tết</h5>
+                            <p class="card-text">150.000₫</p>
+                            <a href="#" class="btn btn-primary">Mua Ngay</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -127,10 +143,6 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script src="./Asset/js/main.js"></script>
-    <script src="./Asset/js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

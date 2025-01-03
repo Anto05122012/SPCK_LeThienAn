@@ -9,6 +9,12 @@ body {
     margin-bottom: 2rem;
 }
 
+.navbar .home {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;

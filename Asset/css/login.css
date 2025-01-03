@@ -142,7 +142,7 @@ body {
 
 .btn-primary {
     background: #FFB800;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 8px;
     padding: 0.8rem;
@@ -198,4 +198,36 @@ input[type="email"]:focus,
 input[type="password"]:focus {
     border-color: #E63E3E;
     outline
+}
+
+
+.container {
+    max-width: 400px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 100%; /* Adjust for mobile */
+}
+
+@media screen and (max-width: 576px) {
+    .register-title {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
 }
