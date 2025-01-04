@@ -158,11 +158,13 @@ body {
 }
 .btn-primary:hover {
     background: #e6a700;
+    color: #000000;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(255, 184, 0, 0.4);
 }
 
 .btn-primary:active {
+    background: #e6a700;
     transform: translateY(-1px);
 }
 
