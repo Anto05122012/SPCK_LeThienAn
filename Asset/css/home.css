@@ -50,10 +50,19 @@ body {
     text-decoration: none;
 }
 
-#account-management-link {
-    color: #E63E3E;
-    font-weight: bold;
+.search-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-left: 1rem; /* Thêm khoảng cách nếu cần */
 }
+
+.search-icon i {
+    font-size: 1.2rem;
+    color: var(--text); /* Sử dụng màu chữ mặc định hoặc màu tùy chọn */
+}
+
 
 .nav-links {
     margin-left: auto;
@@ -228,6 +237,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.features i {
+    color: #cc3333 !important; /* Màu vàng */
+}
+
+
 /* Products Section */
 .categories {
     padding: 6rem 2rem;
@@ -241,37 +255,73 @@ body {
     margin-bottom: 3rem;
 }
 
-.card {
-    border: none;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-radius: 15px;
+.category-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
 }
 
-.card img {
-    border-radius: 15px 15px 0 0;
-    height: 200px;
+.product-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
 }
 
-.card-title {
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-info h3 {
     font-size: 1.2rem;
     color: var(--text);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.card-text {
-    font-size: 1rem;
+.price {
     color: var(--primary);
     font-weight: bold;
+    font-size: 1.3rem;
+    margin: 1rem 0;
 }
 
-.btn-primary {
+.product-card .btn {
+    width: 100%;
+    padding: 0.8rem;
     background: var(--primary);
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 0.8rem;
     font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.product-card .btn:hover {
+    background: #cc3333;
 }
 
 /* Footer */

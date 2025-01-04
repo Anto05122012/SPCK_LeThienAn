@@ -1,0 +1,250 @@
+:root {
+    --primary: #E63E3E;
+    --secondary: #FFB800;
+    --text: #1d1d1f;
+    --background: #fff;
+    --transition: all 0.3s ease;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+line-height: 1.5;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+    transition: top 0.3s ease; /* Hiệu ứng mượt mà khi ẩn/hiện */
+}
+
+.navbar.hidden {
+    top: -100px; /* Đẩy navbar ra ngoài màn hình */
+}
+
+.nav-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem; /* Giảm padding để có thêm không gian */
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 1.5rem; /* Khoảng cách giữa các liên kết */
+margin: 0;
+padding: 0;
+}
+
+.nav-links a {
+text-decoration: none;
+color: var(--text);
+font-size: 1rem;
+white-space: nowrap; /* Ngăn nội dung liên kết xuống dòng */
+}
+
+.blank {
+    opacity: 0%;
+    cursor: default;
+}
+
+.nav-container logo {
+padding-left: 5px;
+}
+
+.logo {
+color: var(--primary);
+font-size: 1.5rem;
+font-weight: 500;
+text-decoration: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 0.5rem 0.8rem;
+    flex-shrink: 0; /* Ngăn khung tìm kiếm co lại */
+    background-color: white;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    flex-grow: 1; /* Input chiếm toàn bộ không gian còn lại */
+    font-size: 1rem;
+}
+
+.search-container .search-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container .search-icon i {
+    font-size: 1.5rem; /* Kích thước biểu tượng */
+    color: var(--text); /* Màu biểu tượng */
+}
+
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-icon i {
+    font-size: 1.5rem;
+    color: var(--text); /* Hoặc chọn màu phù hợp */
+}
+
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon i {
+    font-size: 1.3rem;
+    color: var(--text);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn.secondary {
+    background: var(--secondary);
+    color: var(--text);
+}
+
+.footer {
+    background: #1d1d1f;
+    color: #fff;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.footer-section h3 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: #888;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: #888;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #888;
+}

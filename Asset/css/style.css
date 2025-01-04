@@ -20,29 +20,50 @@ body {
 /* Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between logo and cart icon */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Adjust blur intensity */
+    background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt */
+    backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    flex-direction: column; /* Stack items vertically on small screens */
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+    transition: top 0.3s ease; /* Hiệu ứng mượt mà khi ẩn/hiện */
 }
+
+.navbar.hidden {
+    top: -100px; /* Đẩy navbar ra ngoài màn hình */
+}
+
 
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Giảm padding để có thêm không gian */
 }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Khoảng cách giữa các liên kết */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    white-space: nowrap; /* Ngăn nội dung liên kết xuống dòng */
+}
+
 
 .nav-container logo {
     padding-left: 5px;
@@ -59,6 +80,50 @@ body {
     color: #E63E3E;
     font-weight: bold;
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 0.5rem 0.8rem;
+    flex-shrink: 0; /* Ngăn khung tìm kiếm co lại */
+    background-color: white;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    flex-grow: 1; /* Input chiếm toàn bộ không gian còn lại */
+    font-size: 1rem;
+}
+
+.search-container .search-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container .search-icon i {
+    font-size: 1.5rem; /* Kích thước biểu tượng */
+    color: var(--text); /* Màu biểu tượng */
+}
+
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-icon i {
+    font-size: 1.5rem;
+    color: var(--text); /* Hoặc chọn màu phù hợp */
+}
+
 
 .nav-links {
     margin-left: auto;
