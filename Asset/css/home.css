@@ -301,6 +301,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.product-card a {
+    text-decoration: none;
+}
+
+
 .price {
     color: var(--primary);
     font-weight: bold;
@@ -455,3 +460,4 @@ body {
 .contact-info i {
     color: var(--text);
 }
+
