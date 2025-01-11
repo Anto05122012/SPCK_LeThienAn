@@ -37,28 +37,28 @@ line-height: 1.5;
 }
 
 .nav-container {
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 1rem; /* Giảm padding để có thêm không gian */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Giảm padding để có thêm không gian */
 }
 
 .nav-links {
-display: flex;
-list-style: none;
-gap: 1.5rem; /* Khoảng cách giữa các liên kết */
-margin: 0;
-padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Khoảng cách giữa các liên kết */
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-text-decoration: none;
-color: var(--text);
-font-size: 1rem;
-white-space: nowrap; /* Ngăn nội dung liên kết xuống dòng */
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    white-space: nowrap; /* Ngăn nội dung liên kết xuống dòng */
 }
 
 .blank {

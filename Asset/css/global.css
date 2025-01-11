@@ -51,6 +51,7 @@ body {
 
 .nav-container logo {
     padding-left: 5px;
+    transition: var(--transition);
 }
 
 .logo {
@@ -265,5 +266,5 @@ body {
 }
 main {
     padding: 5rem 2rem;
-    margin-top: 1000px; /* For spacing below navbar */
+    /* margin-top: 1000px; For spacing below navbar */
 }

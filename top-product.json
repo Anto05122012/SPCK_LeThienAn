@@ -1,0 +1,17 @@
+[
+    {
+        "product_image_path": "./Asset/img/banh-tet.jpg",
+        "product_title": "Bánh Chưng Truyền Thống",
+        "product_price": 165
+    },
+    {
+        "product_image_path": "./Asset/img/mut-tet.jpg",
+        "product_title": "Hộp Mứt Tết Thập Cẩm",
+        "product_price": 250
+    },
+    {
+        "product_image_path": "./Asset/img/tra.jpg",
+        "product_title": "Trà Sen Tết",
+        "product_price": 150
+    }
+]
