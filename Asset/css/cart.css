@@ -1,0 +1,74 @@
+main {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+footer {
+    margin-top: 0;
+}
+
+
+/* Bảng giỏ hàng */
+table.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table.table th {
+    background-color: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+table.table td {
+    text-align: center;
+    padding: 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+table.table tr:last-child td {
+    border-bottom: none;
+}
+
+table.table img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.quantity-input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.btn.remove-btn {
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn.remove-btn:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Tổng tiền */
+#total-price {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
