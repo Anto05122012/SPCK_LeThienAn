@@ -27,7 +27,7 @@
                         <a class="nav-link" href="#products">Sản Phẩm</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Về Chúng Tôi</a>
+                        <a class="nav-link" href="./order.html">Đơn hàng</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="account-management-link">Quản Lý Tài Khoản (dành cho admin)</a>
@@ -90,34 +90,40 @@
     <script src="../js/search.js"></script>
     <script>
         fetch('/products.json') // Đảm bảo đúng đường dẫn file JSON
-    .then(response => response.json())
-    .then(data => {
-        const selectedCategory = data.categories["Thực phẩm Tết"]; // Thay "Thực phẩm Tết" bằng loại bạn muốn
-        console.log(selectedCategory); // In danh sách sản phẩm của loại được chọn
+            .then(response => response.json())
+            .then(data => {
+                const selectedCategory = data.categories["Thực phẩm Tết"]; // Thay "Thực phẩm Tết" bằng loại bạn muốn
+                // console.log(selectedCategory); // In danh sách sản phẩm của loại được chọn
 
-        const categoryListElement = document.getElementById('category-grid');
+                const categoryListElement = document.getElementById('category-grid');
 
-        selectedCategory.forEach(product => {
-            const categoryDiv = document.createElement('div');
-            categoryDiv.classList.add('product-card');
-
-            categoryDiv.innerHTML = `
-                <img src="${product.product_image_path}" alt="${product.product_title}">
-                <div class="product-info">
-                    <h3>${product.product_title}</h3>
-                    <p class="price">${product.product_price}.000₫</p>
-                    <div class="button-group">
-                        <a href="/add-to-cart.html" class="button-link">
-                            <button class="add-to-cart-btn">Add to Cart</button>
-                        </a>
-                        <a href="/product-detail.html" class="button-link">
-                            <button class="learn-more-btn">Tìm hiểu thêm</button>
-                        </a>
-                    </div>
-                </div>
-            `;
-            categoryListElement.appendChild(categoryDiv);
-        });
+                selectedCategory.forEach(product => {
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.classList.add('product-card');
+                    categoryDiv.setAttribute('data-id', product.product_ID); // Gán data-id cho sản phẩm
+                    categoryDiv.innerHTML = `
+                        <img src="${product.product_image_path}" alt="${product.product_title}">
+                        <div class="product-info">
+                            <h3>${product.product_title}</h3>
+                            <p class="price">${product.product_price}.000₫</p>
+                        </div>
+                    `;
+                categoryListElement.appendChild(categoryDiv);
+            });
+            // Thêm sự kiện click
+            categoryListElement.addEventListener('click', (event) => {
+                event.preventDefault();
+                const productCard = event.target.closest('.product-card');
+                if (productCard) {
+                    const productID = productCard.getAttribute('data-id');
+                    productInfo(productID);
+                }
+            });            
+        
+        function productInfo(productID){
+            console.log(`Chi tiết sản phẩm với ID: ${productID}`);
+            window.location.href = `./products-info.html?productID=${productID}`;
+        }
     })
     .catch(error => {
         console.error('Lỗi khi tải dữ liệu:', error);

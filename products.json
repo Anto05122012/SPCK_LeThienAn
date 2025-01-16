@@ -2,98 +2,134 @@
     "categories": {
         "Thực phẩm Tết": [
             {
+                "product_ID": 1,
                 "product_image_path": "../img/banh-tet.jpg",
                 "product_title": "Bánh Chưng Truyền Thống",
-                "product_price": 165
+                "product_price": 165,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 2,
                 "product_image_path": "../img/mut-tet.jpg",
                 "product_title": "Hộp Mứt Tết Thập Cẩm",
-                "product_price": 250
+                "product_price": 250,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 3,
                 "product_image_path": "../img/tra.jpg",
                 "product_title": "Trà Sen Tết",
-                "product_price": 150
+                "product_price": 150,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 4,
                 "product_image_path": "../img/banh-quy-tet.jpg",
                 "product_title": "Hộp Bánh Quy Tết",
-                "product_price": 250
+                "product_price": 250,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 5,
                 "product_image_path": "../img/mam-ngu-qua-tet.jpg",
                 "product_title": "Mâm Ngũ Quả Tết",
-                "product_price": 600
+                "product_price": 600,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 6,
                 "product_image_path": "../img/khay-mut-tet.jpg",
                 "product_title": "Khay Mứt Tết Sứ Cao Cấp",
-                "product_price": 350
+                "product_price": 350,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             }
         ],
         "Quần áo": [
             {
+                "product_ID": 7,
                 "product_image_path": "../img/ao-dai-nam.jpg",
                 "product_title": "Áo Dài Truyền Thống Nam",
-                "product_price": 400
+                "product_price": 400,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 8,
                 "product_image_path": "../img/ao-dai-nu.jpg",
                 "product_title": "Áo Dài Lụa Nữ",
-                "product_price": 450
+                "product_price": 450,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 9,
                 "product_image_path": "../img/khan-lua.jpg",
                 "product_title": "Khăn Lụa Họa Tiết Tết",
-                "product_price": 299
+                "product_price": 299,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 10,
                 "product_image_path": "../img/ao-yem.jpg",
                 "product_title": "Áo Yếm Tết Cho Nữ",
-                "product_price": 699
+                "product_price": 699,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 11,
                 "product_image_path": "../img/giay-cao-got-nu.jpg",
                 "product_title": "Giày Cao Gót Nữ Tết",
-                "product_price": "1.750"
+                "product_price": "1.750",
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 12,
                 "product_image_path": "../img/ao-thun-tet.jpg",
                 "product_title": "Áo Thun Tết",
-                "product_price": 299
+                "product_price": 299,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             }
         ],
         "Đồ trang trí": [
             {
+                "product_ID": 13,
                 "product_image_path": "../img/cay-dao-trang-tri.jpg",
                 "product_title": "Cây Đào Trang Trí",
-                "product_price": 300
+                "product_price": 300,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 14,
                 "product_image_path": "../img/cay-mai.jpg",
                 "product_title": "Cây Mai Trang Trí Trung",
-                "product_price": 500
+                "product_price": 500,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 15,
                 "product_image_path": "../img/den-long.jpg",
                 "product_title": "Đèn Lồng Tết",
-                "product_price": 120
+                "product_price": 120,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 16,
                 "product_image_path": "../img/phao-giay.jpg",
                 "product_title": "Pháo Giấy Trang Trí",
-                "product_price": 80
+                "product_price": 80,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 17,
                 "product_image_path": "../img/lich-tet.jpg",
                 "product_title": "Lịch Tết Truyền Thống",
-                "product_price": 100
+                "product_price": 100,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             },
             {
+                "product_ID": 18,
                 "product_image_path": "../img/den-led-trang-tri.jpg",
                 "product_title": "Đèn Led Trang Trí Tết",
-                "product_price": 180
+                "product_price": 180,
+                "product_description": "Sản phẩm chất lượng cao, phù hợp với nhu cầu sử dụng trong mọi dịp lễ Tết."
             }
         ]
     }

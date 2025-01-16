@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav-links navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Trang Chủ</a>
+                        <a class="nav-link" href="./home.html">Trang Chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products">Sản Phẩm</a>
+                        <a class="nav-link" href="./products.html">Sản Phẩm</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Về Chúng Tôi</a>
@@ -35,8 +35,10 @@
                     </li>
                 </ul>
                 <div class="cart-icon">
-                    <i class="bi bi-cart3"></i>
-                    <span class="cart-count">0</span>
+                    <a href="./cart.html">
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-count">0</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -56,7 +58,8 @@
         </div>
         <div class="hero-buttons">
             <a href="#"><button class="btn primary">Mua Ngay!</button></a>
-            <a href="#"><button class="btn secondary">Thêm Vào giỏ hàng</button></a>
+            <a href="#" id="add-to-cart-btn"><button class="btn secondary">Thêm Vào giỏ hàng</button></a>
+
         </div>
     </main>
 
@@ -93,36 +96,79 @@
 
     <!-- JavaScript -->
     <script>
-        // Lấy tham số từ URL
-        // Lấy dữ liệu từ file JSON
-fetch('/products.json')
-    .then(response => response.json())
-    .then(data => {
-        const productData = data.categories;
-
-        // Chọn sản phẩm cụ thể (ví dụ: Bánh Chưng Truyền Thống)
-        let selectedProduct = null;
-        Object.values(productData).forEach(category => {
-            category.forEach(item => {
-                if (item.product_title === "Bánh Chưng Truyền Thống") {
-                    selectedProduct = item;
-                }
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lấy productID từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productID = urlParams.get('productID');
+        
+            // Cập nhật số lượng giỏ hàng khi tải trang
+            updateCartCount();
+        
+            if (!productID) {
+                console.error('Không tìm thấy ID sản phẩm.');
+                document.getElementById('product-title').textContent = 'Không tìm thấy sản phẩm.';
+                document.getElementById('product-description').textContent = 'Vui lòng cung cấp ID sản phẩm hợp lệ.';
+                return;
+            }
+        
+            // Fetch thông tin sản phẩm từ JSON
+            fetch('/products.json')
+                .then(response => response.json())
+                .then(data => {
+                    const allProducts = Object.values(data.categories).flat();
+                    const product = allProducts.find(item => item.product_ID === parseInt(productID));
+        
+                    if (product) {
+                        // Hiển thị thông tin sản phẩm
+                        document.getElementById('product-title').textContent = product.product_title;
+                        document.getElementById('product-image').src = product.product_image_path;
+                        document.getElementById('product-price').textContent = `${product.product_price}.000₫`;
+                        document.getElementById('product-description').textContent =
+                            product.product_description || "Không có mô tả.";
+        
+                        // Xử lý thêm vào giỏ hàng
+                        const addToCartButton = document.getElementById('add-to-cart-btn');
+                        addToCartButton.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            addToCart(productID);
+                        });
+                    } else {
+                        console.error('Sản phẩm không tồn tại.');
+                        document.getElementById('product-title').textContent = 'Sản phẩm không tồn tại.';
+                        document.getElementById('product-description').textContent = 'Vui lòng kiểm tra lại ID sản phẩm.';
+                    }
+                })
+                .catch(error => console.error('Error fetching product details:', error));
         });
+        
+        // Hàm thêm sản phẩm vào giỏ hàng
+        function addToCart(productID) {
+            // Lấy danh sách carts từ localStorage
+            let carts = JSON.parse(localStorage.getItem('carts')) || [];
 
-        // Hiển thị thông tin sản phẩm
-        if (selectedProduct) {
-            document.getElementById('product-image').src = selectedProduct.product_image_path;
-            document.getElementById('product-title').innerText = selectedProduct.product_title;
-            document.getElementById('product-price').innerText = `Giá: ${selectedProduct.product_price}k`;
-        } else {
-            document.querySelector('main').innerHTML = '<p class="text-center">Sản phẩm không tồn tại!</p>';
+            // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+            const existingProduct = carts.find(cartItem => cartItem.id === productID);
+            if (existingProduct) {
+                alert('Sản phẩm đã có trong giỏ hàng.');
+            } else {
+                // Thêm sản phẩm mới với số lượng mặc định là 1
+                carts.push({ id: productID, quantity: 1 });
+                localStorage.setItem('carts', JSON.stringify(carts));
+                alert('Sản phẩm đã được thêm vào giỏ hàng!');
+            }
+
+            // Cập nhật số lượng giỏ hàng
+            updateCartCount();
         }
-    })
-    .catch(error => {
-        console.error('Lỗi khi tải dữ liệu:', error);
-        document.querySelector('main').innerHTML = '<p class="text-center">Không thể tải dữ liệu sản phẩm!</p>';
-    });
+        
+        // Hàm cập nhật số lượng giỏ hàng
+        function updateCartCount() {
+            // Lấy danh sách carts từ localStorage
+            const carts = JSON.parse(localStorage.getItem('carts')) || [];
+            // Cập nhật số lượng giỏ hàng vào phần tử cart-count
+            document.querySelector('.cart-count').textContent = carts.length;
+        }
+        
 
     </script>
 

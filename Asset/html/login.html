@@ -17,16 +17,17 @@
             <ul class="nav-links">
                 <li><a href="/index.html">Trang Chủ</a></li>
                 <li><a href="#products">Sản Phẩm</a></li>
-                <li><a href="#about">Về Chúng Tôi</a></li>
+                <a class="nav-link" href="./order.html">Đơn hàng</a>
             </ul>
         </div>
     </nav>
 
     <div class="container mt-5">
         <!-- Title Đăng Ký -->
-        <h2 class="register-title">Đăng Ký</h2>
+
         <!-- Form Đăng Ký -->
-        <div id="register-form">
+        <div id="register-form" style="display: none;">
+            <h2 class="register-title">Đăng Ký</h2>
             <div class="mb-3">
                 <label for="register-username" class="form-label">Tên Đăng Nhập:</label>
                 <input type="text" id="register-username" class="form-control" required>
@@ -43,7 +44,7 @@
         </div>
 
         <!-- Form Đăng Nhập -->
-        <div id="login-form" class="mt-5" style="display: none;">
+        <div id="login-form" class="mt-5">
             <h2>Đăng Nhập</h2>
             <div class="mb-3">
                 <label for="login-username" class="form-label">Tên Đăng Nhập:</label>

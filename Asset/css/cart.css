@@ -58,12 +58,38 @@ table.table img {
 .btn.remove-btn {
     border-radius: 5px;
     font-size: 0.9rem;
-    transition: background-color 0.2s ease;
+    transition: var(--primary)
 }
 
 .btn.remove-btn:hover {
+transform: translateY(-1px);
     background-color: #d9534f;
     color: white;
+}
+
+.secondary-btn {
+    /* display: flex; */
+    gap: 1rem;
+    justify-content: center;
+    background: var(--secondary);
+    color: var(--text);
+    box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.secondary-btn:hover {
+    background: #e6a600;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 184, 0, 0.4);
+}
+
+.secondary-btn:active {
+    transform: translateY(-1px);
 }
 
 /* Tổng tiền */
