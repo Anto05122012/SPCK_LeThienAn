@@ -1,40 +1,25 @@
-// Lấy danh sách sản phẩm giả lập
-const products = [
-    { id: 1, name: "Bánh Chưng Truyền Thống" },
-    { id: 2, name: "Hộp Mứt Tết Thập Cẩm" },
-    { id: 3, name: "Trà Sen Tết" }
-];
-
-// Xử lý tìm kiếm
+// Tìm kiếm sản phẩm từ JSON
 document.getElementById("search-icon").addEventListener("click", () => {
     const query = document.getElementById("search-input").value.trim().toLowerCase();
-    const results = products.filter(product =>
-        product.name.toLowerCase().includes(query)
-    );// Lấy danh sách sản phẩm giả lập
-    const products = [
-        { id: 1, name: "Bánh Chưng Truyền Thống" },
-        { id: 2, name: "Hộp Mứt Tết Thập Cẩm" },
-        { id: 3, name: "Trà Sen Tết" }
-    ];
-    
-    // Xử lý tìm kiếm
-    document.getElementById("search-icon").addEventListener("click", () => {
-        const query = document.getElementById("search-input").value.trim().toLowerCase();
-        const results = products.filter(product =>
-            product.name.toLowerCase().includes(query)
-        );
-    
-        if (results.length > 0) {
-            alert(`Tìm thấy sản phẩm: ${results.map(product => product.name).join(", ")}`);
-        } else {
-            alert("Không tìm thấy sản phẩm nào!");
-        }
-    });
-    
 
-    if (results.length > 0) {
-        alert(`Tìm thấy sản phẩm: ${results.map(product => product.name).join(", ")}`);
-    } else {
-        alert("Không tìm thấy sản phẩm nào!");
-    }
+    // Fetch dữ liệu từ JSON
+    fetch('../../products.json') // Thay bằng đường dẫn chính xác đến tệp JSON
+        .then(response => response.json())
+        .then(data => {
+            // Lấy toàn bộ sản phẩm từ tất cả các danh mục
+            const allProducts = Object.values(data.categories).flat();
+
+            // Lọc sản phẩm dựa trên từ khóa tìm kiếm
+            const results = allProducts.filter(product =>
+                product.product_title.toLowerCase().includes(query)
+            );
+
+            // Hiển thị kết quả
+            if (results.length > 0) {
+                alert(`Tìm thấy sản phẩm: ${results.map(product => product.product_title).join(", ")}`);
+            } else {
+                alert("Không tìm thấy sản phẩm nào!");
+            }
+        })
+        .catch(error => console.error("Lỗi khi tải dữ liệu JSON:", error));
 });
