@@ -29,6 +29,12 @@ body {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.hero h2 {
+    font-size: 2rem;
+    color: #333;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 img {
     margin-left: 5px;
     width: 100px;
